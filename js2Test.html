@@ -5,22 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>toDO</title>
     <style>
-    .del {
-        text-decoration: line-through;
-    }
+        li {
+            list-style: none;
+        }
+        .del {
+            text-decoration: line-through;
+        }
+        .fade {
+            animation: fadeOut 1s forwards;
+        }
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
-   <ul>
-        <li>assignment 1</li>
-        <li>assignment 2</li>
-        <li>assignment 3</li>
-        <li>assignment 4</li>
-        <li>assignment 5</li>
-        <li>assignment 6</li>
-        <li>assignment 7</li>
-   </ul>
-    <script src="js2Test.js"></script>
+        <audio id="chu">
+            <source src="chu-fade-in.mp3" type="audio/mpeg">
+        </audio>
+       <ul>
+            <li><img src="ball-old.png"></li>
+            <li><img src="ball-old.png"></li>
+            <li><img src="ball-old.png"></li>
+            <li><img src="ball-old.png"></li>
+            <li><img src="ball-old.png"></li>
+       </ul>
+       <script src="js2Test.js"></script>
 </body>
 </html>
