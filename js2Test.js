@@ -1,17 +1,8 @@
 let img = document.querySelector('img');
-let set = setInterval(changeImg, 2000);
-function clear(){
-    clearInterval(set);
-}
-//img.addEventListener('click', changeImg);
-img.addEventListener('click', clear);
-function changeImg(){
-    let nr = img.getAttribute('src')[4];
-    nr++;
-    if (nr <=5) {
-        img.setAttribute('src', 'img/' + nr +'.jpg');
-    } else {
-        nr = 1;
-        img.setAttribute('src', 'img/' + nr +'.jpg');
-    }
+img.addEventListener('click', changePos);
+function changePos(){
+    let x = Math.random()*90;
+    let y = Math.random()*90;
+    img.style.transform = "translate(" + x +"vw, " + y + "vh)";
+    console.log(x,y);
 }
