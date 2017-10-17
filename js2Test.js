@@ -1,9 +1,12 @@
-let input = document.querySelector('input');
-let list = document.querySelector('ul');
-let addTaskButton = document.querySelector('button');
-addTaskButton.addEventListener('click', addTask);
-function addTask(){
-    let addNewTask = document.createElement('li');
-    addNewTask.textContent = input.value;
-    list.appendChild(addNewTask);
+let img = document.querySelector('img');
+img.addEventListener('click', changeImg);
+function changeImg(){
+    let nr = img.getAttribute('src')[4];
+    nr++;
+    if (nr <=5) {
+        img.setAttribute('src', 'img/' + nr +'.jpg');
+    } else {
+        nr = 1;
+        img.setAttribute('src', 'img/' + nr +'.jpg');
+    }
 }
